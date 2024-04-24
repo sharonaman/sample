@@ -1,0 +1,21 @@
+version: "3.11"
+
+services:
+  dett_backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgres://sample:28G>t@&8PBPe@db:5432/sample_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    volumes:
+      - sample_db:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+
+volumes:
+  sample_db:
