@@ -75,10 +75,14 @@ WSGI_APPLICATION = 'sample.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+            'default': {
+                'ENGINE': 'django.db.backends.postgresql_psycopg2',
+                'NAME': sample_db,
+                'USER': sample,
+                'PASSWORD': '28G>t@&8PBPe@db:5432',
+                'HOST': localhost,
+                'PORT': 5432,
+            },
 }
 
 
@@ -117,10 +121,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = Path(BASE_DIR, 'static')
+STATIC_ROOT = Path(BASE_DIR, 'static_files')
 
 STATICFILES_DIRS = [
-  Path(BASE_DIR, 'static_files')
+  Path(BASE_DIR, 'static')
 ]
 
 # Default primary key field type

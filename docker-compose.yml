@@ -1,7 +1,7 @@
 version: "3.11"
 
 services:
-  dett_backend:
+  sample_backend:
     build: .
     ports:
       - "8000:8000"
