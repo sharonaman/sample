@@ -1,0 +1,42 @@
+# Ignore log files
+*.log
+
+# Ignore compiled Python files
+__pycache__/
+
+# Ignore local development settings
+settings_local.py
+
+# Ignore user-specific files
+*.bak
+*.swp
+
+# Ignore coverage reports
+.coverage
+
+# Ignore compiled JavaScript files
+*.js.map
+
+# Ignore Node.js modules if you're using npm or yarn
+node_modules/
+
+# Ignore pipenv or poetry virtual environment
+.Pipfile
+Pipfile.lock
+poetry.lock
+
+# Ignore Docker related files
+.dockerignore
+docker-compose.yml
+docker-compose.override.yml
+Dockerfile
+
+# Ignore pytest cache and result files
+pytest_cache/
+pytest_result/
+
+# Ignore Celery beat schedule file
+celerybeat-schedule
+
+# Ignore Sphinx documentation build
+docs/_build/
